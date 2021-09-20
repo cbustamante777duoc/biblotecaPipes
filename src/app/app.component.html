@@ -67,6 +67,18 @@
           <td>{{porcentaje | percent:'2.2-2'}}</td>
         </tr>
 
+        <tr>
+          <td>{{salario}}</td>
+          <td>currency</td>
+          <td>{{salario | currency}}</td>
+        </tr>
+
+        <tr>
+          <td>{{salario}}</td>
+          <td>currency</td>
+          <td>{{salario | currency:'CLP ':'symbol':'.0-0'}}</td>
+        </tr>
+
       </tbody>
 
     </table>
@@ -75,6 +87,17 @@
     <ul>
       <li *ngFor="let item of areglo |slice:4:22">{{item}}</li>
     </ul>
+
+    <h3>JSON pipe</h3>
+    <hr>
+    <div class="row mb-5">
+      <div class="col">
+        <p> <b>this pipe is used to show the json objects</b> </p>
+        <pre>
+          {{heroe | json}}
+        </pre>
+      </div>
+    </div>
 
   </div>
 </div>
