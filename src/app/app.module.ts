@@ -9,10 +9,14 @@ registerLocaleData(localEs);
 registerLocaleData(localFr);
 
 import { AppComponent } from './app.component';
+import { MyFirstPipePipe } from './pipes/my-first-pipe.pipe';
+import { DomSeguroPipe } from './pipes/dom-seguro.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MyFirstPipePipe,
+    DomSeguroPipe
   ],
   imports: [
     BrowserModule

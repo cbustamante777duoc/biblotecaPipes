@@ -1,12 +1,9 @@
 <h1 class="mt-3">Pipes <small>Angular</small></h1>
-<hr>
+<hr />
 
 <div class="row">
   <div class="col">
-
-
     <table class="table">
-
       <thead class="table-dark">
         <tr>
           <th>Variable</th>
@@ -16,154 +13,171 @@
       </thead>
 
       <tbody>
-
         <tr>
-          <td>{{nombre}}</td>
+          <td>{{ nombre }}</td>
           <td>uppercase</td>
-          <td>{{nombre|uppercase}}</td>
+          <td>{{ nombre | uppercase }}</td>
         </tr>
 
         <tr>
-          <td>{{nombre}}</td>
+          <td>{{ nombre2 }}</td>
+          <td>pipe personalized</td>
+          <td>{{ nombre2 | myFirstPipe }}</td>
+        </tr>
+
+        <tr>
+          <td>{{ nombre }}</td>
           <td>titlecase</td>
-          <td>{{nombre|titlecase}}</td>
+          <td>{{ nombre | titlecase }}</td>
         </tr>
 
-
         <tr>
-          <td>{{nombre}}</td>
+          <td>{{ nombre }}</td>
           <td>lowercase</td>
-          <td>{{nombre|lowercase}}</td>
+          <td>{{ nombre | lowercase }}</td>
         </tr>
 
-
         <tr>
-          <td>{{nombre}}</td>
+          <td>{{ nombre }}</td>
           <td>slice:7 <b>parameter 1(cut first 7)</b></td>
-          <td>{{nombre|slice:7}}</td>
+          <td>{{ nombre | slice: 7 }}</td>
         </tr>
 
         <tr>
-          <td>{{nombre}}</td>
+          <td>{{ nombre }}</td>
           <td>slice:0:7 <b>parameter 2 (get first 7)</b></td>
-          <td>{{nombre|slice:0:7}}</td>
+          <td>{{ nombre | slice: 0:7 }}</td>
         </tr>
 
         <tr>
-          <td>{{areglo}}</td>
+          <td>{{ areglo }}</td>
           <td>slice:1:5 <b>parameter 2 (get second to five)</b></td>
-          <td>{{areglo|slice:1:5}}</td>
+          <td>{{ areglo | slice: 1:5 }}</td>
         </tr>
 
         <tr>
-          <td>{{PI}}</td>
+          <td>{{ PI }}</td>
           <td>number:'1.0-2'</td>
-          <td>{{PI | number:'1.0-2'}}</td>
+          <td>{{ PI | number: "1.0-2" }}</td>
         </tr>
 
         <tr>
-          <td>{{porcentaje}}</td>
+          <td>{{ porcentaje }}</td>
           <td>percent</td>
-          <td>{{porcentaje | percent}}</td>
+          <td>{{ porcentaje | percent }}</td>
         </tr>
 
         <tr>
-          <td>{{porcentaje}}</td>
+          <td>{{ porcentaje }}</td>
           <td>percent:'2.2-2' <b>two whole numbers and two decimals</b></td>
-          <td>{{porcentaje | percent:'2.2-2'}}</td>
+          <td>{{ porcentaje | percent: "2.2-2" }}</td>
         </tr>
 
         <tr>
-          <td>{{salario}}</td>
+          <td>{{ salario }}</td>
           <td>currency</td>
-          <td>{{salario | currency}}</td>
+          <td>{{ salario | currency }}</td>
         </tr>
 
         <tr>
-          <td>{{salario}}</td>
+          <td>{{ salario }}</td>
           <td>currency:'CLP ':'symbol':'.0-0'</td>
-          <td>{{salario | currency:'CLP ':'symbol':'.0-0'}}</td>
+          <td>{{ salario | currency: "CLP ":"symbol":".0-0" }}</td>
         </tr>
 
         <tr>
-          <td>{{nuevaPromesa}}</td>
+          <td>{{ nuevaPromesa }}</td>
           <td>async</td>
-          <td>{{nuevaPromesa | async}}</td>
+          <td>{{ nuevaPromesa | async }}</td>
         </tr>
 
         <tr>
-          <td>{{fecha}}</td>
+          <td>{{ fecha }}</td>
           <td>date</td>
-          <td>{{fecha | date}}</td>
+          <td>{{ fecha | date }}</td>
         </tr>
 
         <tr>
-          <td>{{fecha}}</td>
+          <td>{{ fecha }}</td>
           <td>date:'medium'</td>
-          <td>{{fecha | date:'medium'}}</td>
+          <td>{{ fecha | date: "medium" }}</td>
         </tr>
 
         <tr>
-          <td>{{fecha}}</td>
+          <td>{{ fecha }}</td>
           <td>date:'short'</td>
-          <td>{{fecha | date:'short'}}</td>
+          <td>{{ fecha | date: "short" }}</td>
         </tr>
 
         <tr>
-          <td>{{fecha}}</td>
+          <td>{{ fecha }}</td>
           <td>date:'fullDate'</td>
-          <td>{{fecha | date:'fullDate'}}</td>
+          <td>{{ fecha | date: "fullDate" }}</td>
         </tr>
 
         <tr>
-          <td>{{fecha}}</td>
+          <td>{{ fecha }}</td>
           <td>date:'MMMM - dd'</td>
-          <td>{{fecha | date:'MMMM - dd'}}</td>
+          <td>{{ fecha | date: "MMMM - dd" }}</td>
         </tr>
 
         <tr>
-          <td>{{fecha}}</td>
+          <td>{{ fecha }}</td>
           <td>date:'MMMM - dd':'':'fr'</td>
-          <td>{{fecha | date:'MMMM - dd':'':'fr'}}</td>
+          <td>{{ fecha | date: "MMMM - dd":"":"fr" }}</td>
         </tr>
 
         <tr>
-          <td>{{fecha}}</td>
+          <td>{{ fecha }}</td>
           <td>
-              date:'MMMM - dd':'':'{{idioma}}'
-            <br>
-            <button (click)="idioma='es'" class="mr-1 btn btn-primary">
-             Español
+            date:'MMMM - dd':'':'{{ idioma }}'
+            <br />
+            <button (click)="idioma = 'es'" class="mr-1 btn btn-primary">
+              Español
             </button>
-            <button (click)="idioma='en'" class="mr-1 btn btn-secondary">
-             Ingles
+            <button (click)="idioma = 'en'" class="mr-1 btn btn-secondary">
+              Ingles
             </button>
-            <button (click)="idioma='fr'" class="mr-1 btn btn-success">
+            <button (click)="idioma = 'fr'" class="mr-1 btn btn-success">
               Frances
             </button>
           </td>
-          <td>{{fecha | date:'MMMM - dd':'':idioma}}</td>
+          <td>{{ fecha | date: "MMMM - dd":"":idioma }}</td>
         </tr>
-
       </tbody>
-
     </table>
 
     <h4>Slice</h4>
     <ul>
-      <li *ngFor="let item of areglo |slice:4:22">{{item}}</li>
+      <li *ngFor="let item of areglo | slice: 4:22">{{ item }}</li>
     </ul>
 
     <h3>JSON pipe</h3>
-    <hr>
+    <hr />
     <div class="row mb-5">
       <div class="col">
-        <p> <b>this pipe is used to show the json objects</b> </p>
+        <p><b>this pipe is used to show the json objects</b></p>
         <pre>
-          {{heroe | json}}
+          {{ heroe | json }}
         </pre>
       </div>
     </div>
+  </div>
+</div>
 
+<h3 class="mt-4">Domseguro</h3>
+<hr />
+
+<div class="row mb-5">
+  <div class="col">
+    <iframe
+      width="560"
+      height="315"
+      [src]="video |domSeguro"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
   </div>
 </div>
