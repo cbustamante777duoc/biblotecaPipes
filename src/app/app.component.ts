@@ -13,6 +13,7 @@ export class AppComponent {
   porcentaje:number = 0.7876;
   salario:number = 1000000;
   fecha: Date = new Date();
+  idioma:string = 'es';
 
   nuevaPromesa = new Promise<string>((resolve)=>{
 
