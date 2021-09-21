@@ -16,6 +16,7 @@ export class AppComponent {
   fecha: Date = new Date();
   idioma:string = 'es';
   video:string = 'https://www.youtube.com/embed/VAkio68d51A';
+  activar:boolean = true;
 
   nuevaPromesa = new Promise<string>((resolve)=>{
 
