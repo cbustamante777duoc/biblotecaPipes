@@ -7,11 +7,19 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  nombre: string = 'Capitan America';
+  nombre: string = 'capitan america';
   areglo:number[] = [1,2,3,4,5,6,7,8,9];
   PI:number = Math.PI;
   porcentaje:number = 0.7876;
   salario:number = 1000000;
+  fecha: Date = new Date();
+
+  nuevaPromesa = new Promise<string>((resolve)=>{
+
+    setTimeout(() => {
+      resolve('llego el dato a los 4.5 segundo')
+    }, 4500);
+  });
 
   heroe = {
     nombre:'Peter Parker',

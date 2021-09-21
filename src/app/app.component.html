@@ -23,6 +23,12 @@
           <td>{{nombre|uppercase}}</td>
         </tr>
 
+        <tr>
+          <td>{{nombre}}</td>
+          <td>titlecase</td>
+          <td>{{nombre|titlecase}}</td>
+        </tr>
+
 
         <tr>
           <td>{{nombre}}</td>
@@ -75,8 +81,44 @@
 
         <tr>
           <td>{{salario}}</td>
-          <td>currency</td>
+          <td>currency:'CLP ':'symbol':'.0-0'</td>
           <td>{{salario | currency:'CLP ':'symbol':'.0-0'}}</td>
+        </tr>
+
+        <tr>
+          <td>{{nuevaPromesa}}</td>
+          <td>async</td>
+          <td>{{nuevaPromesa | async}}</td>
+        </tr>
+
+        <tr>
+          <td>{{fecha}}</td>
+          <td>date</td>
+          <td>{{fecha | date}}</td>
+        </tr>
+
+        <tr>
+          <td>{{fecha}}</td>
+          <td>date:'medium'</td>
+          <td>{{fecha | date:'medium'}}</td>
+        </tr>
+
+        <tr>
+          <td>{{fecha}}</td>
+          <td>date:'short'</td>
+          <td>{{fecha | date:'short'}}</td>
+        </tr>
+
+        <tr>
+          <td>{{fecha}}</td>
+          <td>date:'fullDate'</td>
+          <td>{{fecha | date:'fullDate'}}</td>
+        </tr>
+
+        <tr>
+          <td>{{fecha}}</td>
+          <td>date:'MMMM - dd'</td>
+          <td>{{fecha | date:'MMMM - dd'}}</td>
         </tr>
 
       </tbody>
